@@ -7,6 +7,7 @@
 
 Module.register("MMM-uptimerobot", {
   defaults: {
+    api_key: "",
     updateInterval: 60000,
     retryDelay: 5000,
     useIcons: false,
@@ -54,7 +55,7 @@ Module.register("MMM-uptimerobot", {
   getTranslations: function () {
     //FIXME: This can be load a one file javascript definition
     return {
-      de: "translate/de.json",
+      de: "translations/de.json",
       en: "translations/en.json",
       es: "translations/es.json"
     };
@@ -132,12 +133,12 @@ Module.register("MMM-uptimerobot", {
         // create a cell in a row for name of server
         var lineCell = document.createElement("td");
 
-        // add status
         tableLine.appendChild(self.getStatusTest(element.status));
         innerTable.appendChild(tableLine);
 
+
         lineCell.className = 'friendlyName';
-        lineCell.innerHTML = element.friendly_name;
+        lineCell.innerHTML += element.friendly_name;
         tableLine.appendChild(lineCell);
       });
 

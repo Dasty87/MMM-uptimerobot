@@ -23,7 +23,7 @@ module.exports = NodeHelper.create({
      * argument payload mixed - The payload of the notification.
      */
     socketNotificationReceived: function (notification, payload) {
-        if (notification === "uptimerobot-getData") {
+        if (notification === "MMM-uptimerobot-getData") {
             this.config = payload;
             this.getData();
         }
@@ -62,7 +62,7 @@ module.exports = NodeHelper.create({
                 retry = false;
                 throw new Error(error);
             }
-            self.sendSocketNotification("uptimerobot-processData", JSON.parse(body));
+            self.sendSocketNotification("MMM-uptimerobot-processData", JSON.parse(body));
             if (retry) {
                 self.scheduleUpdate((self.loaded) ? -1 : self.config.retryDelay);
             }

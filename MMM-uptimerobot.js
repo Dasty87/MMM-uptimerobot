@@ -37,7 +37,7 @@ Module.register("MMM-uptimerobot", {
   },
 
   getData: function () {
-      this.sendSocketNotification("uptimerobot-getData", this.config);
+      this.sendSocketNotification("MMM-uptimerobot-getData", this.config);
   },
 
   createWrapper: function(textToTranslate) {
@@ -69,7 +69,7 @@ Module.register("MMM-uptimerobot", {
 
   // socketNotificationReceived from helper
   socketNotificationReceived: function (notification, payload) {
-    if (notification === "uptimerobot-processData") {
+    if (notification === "MMM-uptimerobot-processData") {
       this.processData(payload);
         this.updateDom();
     }
@@ -131,13 +131,13 @@ Module.register("MMM-uptimerobot", {
         // create a cell in a row for name of server
         var lineCell = document.createElement("td");
 
-        lineCell.className = 'friendlyName';
-        lineCell.innerHTML = element.friendly_name;
-        tableLine.appendChild(lineCell);
-
         // add status
         tableLine.appendChild(self.getStatusTest(element.status));
         innerTable.appendChild(tableLine);
+
+        lineCell.className = 'friendlyName';
+        lineCell.innerHTML = element.friendly_name;
+        tableLine.appendChild(lineCell);
       });
 
       wrapper.appendChild(innerTable);

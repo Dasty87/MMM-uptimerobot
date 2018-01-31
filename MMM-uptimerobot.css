@@ -6,7 +6,7 @@
  *
  */
 
-.uptimerobot .friendlyName {
+.MMM-uptimerobot .friendlyName {
     padding-left: 0;
     padding-right: 25px;
 }
@@ -14,22 +14,22 @@
 
 /*  Colors  */
 
-.uptimerobot td.colored.online {
+.MMM-uptimerobot td.colored.online {
     color: #9FDF9F;
 }
 
-.uptimerobot td.colored.offline {
+.MMM-uptimerobot td.colored.offline {
     color: #FF8E99;
 }
 
-.uptimerobot td.colored.paused {
+.MMM-uptimerobot td.colored.paused {
     color: #BCDDFF;
 }
 
-.uptimerobot td.colored.seems-down {
+.MMM-uptimerobot td.colored.seems-down {
     color: #FFCC80;
 }
 
-.uptimerobot td.colored.not-checked-yet {
+.MMM-uptimerobot td.colored.not-checked-yet {
     color: #D3D3D3;
 }

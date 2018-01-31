@@ -14,7 +14,7 @@
     ],
         "repository": {
         "type": "git",
-        "url": "https://github.com/mrVragec/MMM-uptimerobot"
+        "url": "https://github.com/Dasty/MMM-uptimerobot"
     },
     "devDependencies": {
         "grunt": "latest",

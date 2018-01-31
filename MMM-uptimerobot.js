@@ -37,7 +37,7 @@ Module.register("MMM-uptimerobot", {
   },
 
   getData: function () {
-      this.sendSocketNotification("MMM-uptimerobot-getData", this.config);
+      this.sendSocketNotification("uptimerobot-getData", this.config);
   },
 
   createWrapper: function(textToTranslate) {
@@ -54,6 +54,7 @@ Module.register("MMM-uptimerobot", {
   getTranslations: function () {
     //FIXME: This can be load a one file javascript definition
     return {
+      de: "translate/de.json",
       en: "translations/en.json",
       es: "translations/es.json"
     };
@@ -69,7 +70,7 @@ Module.register("MMM-uptimerobot", {
 
   // socketNotificationReceived from helper
   socketNotificationReceived: function (notification, payload) {
-    if (notification === "MMM-uptimerobot-processData") {
+    if (notification === "uptimerobot-processData") {
       this.processData(payload);
         this.updateDom();
     }
